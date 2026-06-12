@@ -1,0 +1,22 @@
+[project]
+name = "django-ninja-rbac"
+version = "1.0.0"
+description = "A simple, light-weight privilege checker decorator for Django Ninja APIs."
+readme = "README.md"
+requires-python = ">=3.11"
+dependencies = [
+    "django-ninja>=1.5.0"
+]
+
+[project.scripts]
+ninja_rbac = 'ninja_rbac:main'
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/ninja_rbac"]
+
+[tool.hatch.build.targets.sdist]
+include = [
+    "/src",
+    "/README.md",
+    "/LICENSE",
+]
